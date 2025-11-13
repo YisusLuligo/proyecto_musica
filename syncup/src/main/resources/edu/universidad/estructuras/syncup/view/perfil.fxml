@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.universidad.estructuras.syncup.controller.PerfilController" prefWidth="960" prefHeight="600">
+    <children>
+        <VBox spacing="10" AnchorPane.leftAnchor="12" AnchorPane.rightAnchor="12" AnchorPane.topAnchor="12" AnchorPane.bottomAnchor="12">
+            <Label text="Mi Perfil" styleClass="title"/>
+            <HBox spacing="8">
+                <Label text="Nombre:"/>
+                <TextField fx:id="tfNombre"/>
+                <Label text="Contraseña:"/>
+                <PasswordField fx:id="pfPassword"/>
+                <Button text="Guardar" onAction="#onGuardar" styleClass="btn-primary"/>
+            </HBox>
+            <Label text="Favoritos" styleClass="subtitle"/>
+            <HBox spacing="8">
+                <ComboBox fx:id="cbCanciones"/>
+                <Button text="Agregar a Favoritos" onAction="#onAgregarFav" styleClass="btn-secondary"/>
+                <Button text="Exportar CSV" onAction="#onExportarCSV" styleClass="btn-primary"/>
+            </HBox>
+            <ListView fx:id="listFavoritos"/>
+            <Label fx:id="lblMsg"/>
+        </VBox>
+    </children>
+</AnchorPane>

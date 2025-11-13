@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.universidad.estructuras.syncup.controller.RegistroController" prefWidth="960" prefHeight="600">
+    <children>
+        <VBox spacing="10" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" alignment="CENTER" styleClass="root-bg">
+            <Label text="Registro" styleClass="title"/>
+            <TextField fx:id="tfUsuario" promptText="Usuario"/>
+            <PasswordField fx:id="pfPassword" promptText="Contraseña"/>
+            <TextField fx:id="tfNombre" promptText="Nombre completo"/>
+            <HBox spacing="10">
+                <Button text="Crear cuenta" onAction="#onRegistrar" styleClass="btn-primary"/>
+                <Button text="Volver" onAction="#volverLogin" styleClass="btn-secondary"/>
+            </HBox>
+            <Label fx:id="lblMsg" />
+        </VBox>
+    </children>
+</AnchorPane>
